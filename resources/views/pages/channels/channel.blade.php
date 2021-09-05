@@ -50,7 +50,7 @@
                                 <i class="fas fa-cogs text-info fa-3x me-4"></i>
                             </div>
                             <div>
-                                <h5 class="api_heading">updateChannelPermissons</h5>
+                                <h5 class="api_heading">updateChannelPermissions</h5>
                                 <p class="mb-0 api-desc">Change Channel Permissions</p>
                             </div>
                         </div>
