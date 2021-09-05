@@ -42,4 +42,25 @@ $ php artisan start:bot "<bot token>"
 $ cd projectroot/server/socket && node app.js
 ````
 
+### APIs
 
+Open up the browser
+Ensure the PORT 3026 and 3025 are open and free
+```angular2html
+http://localhost/phpdiscordsdk/public
+```
+
+####  Documentation
+**[Complete Docs of PHPDiscordSDK](https://phpdiscordsdk.gitbook.io/)**
+
+
+
+> Project is Open for contributions , please feel free to fork
+
+**Contribution Guide**
+
+- All Pull requests should be from a Local Branch of Develop
+- Be sure to check out Develop Branch
+- Any other pull requests to master  or other branches will be rejected
+
+&copy;MIT License
