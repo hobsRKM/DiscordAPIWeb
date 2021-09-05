@@ -16,7 +16,7 @@ class EnsureTokenIsValid
      */
     public function handle(Request $request, Closure $next)
     {
-        if(false)
+        if(!empty($request->input('bot_token')))
             return $next($request);
         else
             return response()
