@@ -11,11 +11,13 @@ Allowing you to build bots faster.
 This also demonstrates on how you can communicate with discord from web panel allowing you to build rich dashboards using PHPDiscorSDK
 
 ### Requires
-- PHPDiscordSDK
+- PHPDiscordSDK (Checkout my library <a href="https://github.com/hobsRKM/PHPDiscordSDK">PHPDiscordSDK</a>)
 - Node.js >= 10
 - Composer
 - PHP >=7.0
 
+### PHPDiscordSDK API Docs
+- <a href="https://phpdiscordsdk.gitbook.io/">phpdiscordsdk.gitbook.io</a>
 
 ````bash 
 #### Install PHPDiscordSDK in the root of project
