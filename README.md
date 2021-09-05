@@ -8,13 +8,14 @@
 
 DiscordAPIWeb is a web application framework that allows you to experiment with DiscordAPI and inspect each of the response.
 Allowing you to build bots faster. 
-This also demonstrates on how you can communicate with discord from web panel allowing you to build rich dashboards using PHPDiscorSDK
+This also demonstrates on how you can communicate with discord from web panel allowing you to build rich dashboards using PHPDiscordSDK
 
 ### Requires
 - PHPDiscordSDK (Checkout my library <a href="https://github.com/hobsRKM/PHPDiscordSDK">PHPDiscordSDK</a>)
 - Node.js >= 10
 - Composer
 - PHP >=7.0
+- Laravel >=7.X 
 
 ### Demonstration
 https://user-images.githubusercontent.com/11420858/132134009-b337914f-8a3c-4651-9f34-c0972597f247.mp4
