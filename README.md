@@ -17,7 +17,7 @@ This also demonstrates on how you can communicate with discord from web panel al
 - PHP >=7.0
 
 ### Demonstration
-https://user-images.githubusercontent.com/11420858/132133683-6cb1afec-e4b6-4901-b5e5-a98ac5d6e37a.mp4
+https://user-images.githubusercontent.com/11420858/132134009-b337914f-8a3c-4651-9f34-c0972597f247.mp4
 
 ### PHPDiscordSDK API Docs
 - <a href="https://phpdiscordsdk.gitbook.io/">phpdiscordsdk.gitbook.io</a>
