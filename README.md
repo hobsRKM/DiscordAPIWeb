@@ -16,6 +16,9 @@ This also demonstrates on how you can communicate with discord from web panel al
 - Composer
 - PHP >=7.0
 
+### Demonstration
+https://user-images.githubusercontent.com/11420858/132133683-6cb1afec-e4b6-4901-b5e5-a98ac5d6e37a.mp4
+
 ### PHPDiscordSDK API Docs
 - <a href="https://phpdiscordsdk.gitbook.io/">phpdiscordsdk.gitbook.io</a>
 
@@ -30,8 +33,7 @@ $ cd projectroot/server/socket/ && composer install
 $ composer dump-autolaod
 ````
 
-### Demonstration
-https://user-images.githubusercontent.com/11420858/132133683-6cb1afec-e4b6-4901-b5e5-a98ac5d6e37a.mp4
+
 ### Start the server
 ````bash 
 #### In the root of project, start the bot
