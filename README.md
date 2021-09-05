@@ -29,3 +29,15 @@ $ cd projectroot/server/socket/ && composer install
 #### Autoload clases
 $ composer dump-autolaod
 ````
+
+### Demonstration
+https://user-images.githubusercontent.com/11420858/132133683-6cb1afec-e4b6-4901-b5e5-a98ac5d6e37a.mp4
+### Start the server
+````bash 
+#### In the root of project, start the bot
+$ php artisan start:bot "<bot token>"
+#### In the server folder, start socket server
+$ cd projectroot/server/socket && node app.js
+````
+
+
