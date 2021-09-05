@@ -55,7 +55,7 @@ http://localhost/phpdiscordsdk/public
 
 
 
-> Project is Open for contributions , please feel free to fork
+> Project is Open for contributions as there are more number of APIs to be added, please feel free to fork
 
 **Contribution Guide**
 
