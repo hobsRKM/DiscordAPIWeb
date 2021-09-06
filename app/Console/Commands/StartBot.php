@@ -2,9 +2,12 @@
 
 namespace App\Console\Commands;
 
+use HobsRkm\SDK\PHPDiscordSDK\Config\Config;
 use Illuminate\Console\Command;
 use \HobsRkm\SDK\PHPDiscordSDK\PHPDiscordSDKFactory;
+use Illuminate\Http\Request;
 use React\Http\Browser;
+use App\Models\BotToken;
 
 class StartBot extends Command
 {
@@ -40,7 +43,8 @@ class StartBot extends Command
     public function handle()
     {
         PHPDiscordSDKFactory::getInstance()->botConnect($this->argument('token'))->then(
-            function ($bot) {
+            function ($bot)  {
+                $this->saveToken();
                 $bot->on('message', function ($event) {
                     PHPDiscordSDKFactory::getInstance()->formatEvent($event)->then(function($message){
                         //All events sent from client will be available here, including the server details the bot is listening on
@@ -68,5 +72,13 @@ class StartBot extends Command
             ),
             json_encode($message)
         );
+    }
+
+    private function saveToken()
+    {
+        $botModel = new BotToken;
+        BotToken::truncate();
+        $botModel->token = (new Config)->getToken();
+        $botModel->save();
     }
 }

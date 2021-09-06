@@ -16,10 +16,10 @@ class EnsureTokenIsValid
      */
     public function handle(Request $request, Closure $next)
     {
-        if(!empty($request->input('bot_token')))
-            return $next($request);
-        else
+        if($request->has('bot_token') && empty($request->input('bot_token')))
             return response()
-                ->json(['error' => 'Missing Bot Token'],200,['Content-Type' => 'application/text']);
+                ->json(['error' => 'Invalid Bot Token Provided!'],200,['Content-Type' => 'application/text']);
+        else
+            return $next($request);
     }
 }

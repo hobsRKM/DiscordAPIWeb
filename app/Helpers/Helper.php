@@ -1,21 +1,20 @@
 <?php
 
 use HobsRkm\SDK\PHPDiscordSDK\Config\Config;
-$existingBotToken = (new Config)->getToken();
+use App\Models\BotToken;
 
 if (! function_exists('resetToken')) {
 
     function resetToken($token='')
     {
-        global $existingBotToken;
         $config = new Config();
-
         $config->clearToken();
         if(!empty($token)){
             $config->setToken($token);
         } else {
-            if(!empty($existingBotToken))
-                $config->setToken($existingBotToken);
+            $token = BotToken::find(1);
+            if(!empty($token->token))
+                $config->setToken($token->token);
         }
         $config->saveToken();
     }

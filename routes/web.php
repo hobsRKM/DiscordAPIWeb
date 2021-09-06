@@ -13,17 +13,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+CONST LAYOUT = 'layout/layout';
 Route::get('/', function () {
-    return view('layout/layout',["page"=>"pages/dashboard/home","data"=>array("test"=>"hello")]);
+    return view(LAYOUT,["page"=>"pages/dashboard/home","data"=>array()]);
 });
 
 Route::get('/channels', function () {
-    return view('layout/layout',["page"=>"pages/channels/channel","data"=>array("test"=>"hello")]);
+    return view(LAYOUT,["page"=>"pages/channels/channel","data"=>array()]);
 });
 
 Route::get('/messages', function () {
-    return view('layout/layout',["page"=>"pages/dashboard/home","data"=>array("test"=>"hello")]);
+    return view(LAYOUT,["page"=>"pages/dashboard/home","data"=>array()]);
 });
 
 Route::prefix('channels')->group(function () {

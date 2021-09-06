@@ -30,12 +30,13 @@ class Channel extends Controller
         return view('layout/layout',
             [
                 "page" => "pages/channels/channel_apis/get_channel_details",
-                "data" => array("test" => "hello")
+                "data" => array()
             ]
         );
     }
 
     /**
+     * @param Request $request
      * @author: Yuvaraj Mudaliar ( @HobsRKM )
      * Date: 9/4/2021
      * Docs API : https://phpdiscordsdk.gitbook.io/sdk/apis/getchanneldetails
@@ -65,7 +66,7 @@ class Channel extends Controller
                 echo json_encode($reason);
 
             });
-        //restore token after execute
+        //reset token after execute
         resetToken();
     }
 }

@@ -4,15 +4,15 @@
 <form id="apiParams" class="needs-validation" novalidate>
     <div class="row justify-content-center">
         <div class="form-outline col-md-4 mb-4 ">
-            <input name="channel_id" type="text" required id="typeText" class="form-control btn-success"/>
+            <input name="channel_id" type="text" required  class="form-control btn-success"/>
             <label class="form-label" for="typeText">Channel ID*</label>
 
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="form-outline col-md-4 mb-4 ">
-            <input name="bot_token" type="text" required id="typeText" class="form-control btn-success"/>
-            <label  class="form-label" for="typeText">Bot Token* </label>
+            <input name="bot_token" type="text"  id="botToken" class="form-control btn-success"/>
+            <label  class="form-label" for="typeText">Bot Token (Optional if using our test server bot) </label>
 
         </div>
     </div>

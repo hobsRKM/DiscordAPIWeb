@@ -235,4 +235,7 @@ section {
     font-size: 14px;
 }
 
-
+.alert-dark {
+    background-color: #274170 !important;
+    color: white !important;
+}

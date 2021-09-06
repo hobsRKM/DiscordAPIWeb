@@ -32,7 +32,7 @@
                 <a href="/" class="list-group-item list-group-item-action py-2 ripple {{ request()->is('/') ? 'active' : '' }}"  >
                     <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Dashboard Console</span>
                 </a>
-                <a href="channels" class="list-group-item list-group-item-action py-2 ripple {{ request()->is('channels/*') ? 'active' : '' }}">
+                <a href="../channels" class="list-group-item list-group-item-action py-2 ripple {{ request()->is('channels/*') ? 'active' : '' }}">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Channels </span>
                 </a>
                 <a href="messages" class="list-group-item list-group-item-action py-2 ripple"><i

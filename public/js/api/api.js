@@ -16,6 +16,9 @@ function api(type) {
 function request(url) {
     $(".loader").show();
     $(".loader").parent().attr("disabled",true);
+    if(!$("#botToken").val()){
+        $("#botToken").removeAttr("name")
+    }
     $.post(
         url,
         $("#apiParams").serialize(),
