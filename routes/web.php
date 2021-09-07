@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-CONST LAYOUT = 'layout/layout';
+
 Route::get('/', function () {
     return view(LAYOUT,["page"=>"pages/dashboard/home","data"=>array()]);
 });
@@ -27,8 +27,25 @@ Route::get('/messages', function () {
 });
 
 Route::prefix('channels')->group(function () {
-    Route::get('/getChannelDetails', [Channel::class, 'index']);
-    Route::post('/getChannelDetails', [Channel::class, 'getChannelDetails'])
+    /**
+     * Views
+     */
+    Route::get('/getChannelDetails', [Channel::class, 'getChannelDetails']);
+    Route::get('/getChannelMessages', [Channel::class, 'getChannelMessages']);
+    Route::get('/getUpdateChannelDetails', [Channel::class, 'getUpdateChannelDetails']);
+    Route::get('/getChannelPermissions', [Channel::class, 'getChannelPermissions']);
+
+
+    /**
+     * API POST
+     */
+    Route::post('/postChannelDetails', [Channel::class, 'postChannelDetails'])
+        ->middleware('valid.token');
+    Route::post('/postChannelMessages', [Channel::class, 'postChannelMessages'])
+        ->middleware('valid.token');
+    Route::post('/postUpdateChannelDetails', [Channel::class, 'postUpdateChannelDetails'])
+        ->middleware('valid.token');
+    Route::post('/postUpdateChannelPermissions', [Channel::class, 'postUpdateChannelPermissions'])
         ->middleware('valid.token');
 });
 

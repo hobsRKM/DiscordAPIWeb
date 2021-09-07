@@ -32,14 +32,14 @@
                 <a href="/" class="list-group-item list-group-item-action py-2 ripple {{ request()->is('/') ? 'active' : '' }}"  >
                     <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Dashboard Console</span>
                 </a>
-                <a href="../channels" class="list-group-item list-group-item-action py-2 ripple {{ request()->is('channels/*') ? 'active' : '' }}">
+                <a href="{{URL::to('/')}}/channels" class="list-group-item list-group-item-action py-2 ripple {{ request()->is('channels/*') ? 'active' : '' }}">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Channels </span>
                 </a>
-                <a href="messages" class="list-group-item list-group-item-action py-2 ripple"><i
+                <a href="{{URL::to('/')}}/messages" class="list-group-item list-group-item-action py-2 ripple"><i
                         class="fas fa-lock fa-fw me-3"></i><span>Messages</span></a>
-                <a href="reactions" class="list-group-item list-group-item-action py-2 ripple"><i
+                <a href="{{URL::to('/')}}/reactions" class="list-group-item list-group-item-action py-2 ripple"><i
                         class="fas fa-chart-line fa-fw me-3"></i><span>Reactions</span></a>
-                <a href="guilds" class="list-group-item list-group-item-action py-2 ripple">
+                <a href="{{URL::to('/')}}/guilds" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="fas fa-chart-pie fa-fw me-3"></i><span>Guilds</span>
                 </a>
 
@@ -64,13 +64,13 @@
             </a>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Github</a>
+                    <a target="_blank" class="nav-link" href="https://github.com/hobsRKM/phpdiscordsdk">PHPDiscordSDK Library</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">PHPDiscordSDK Library</a>
+                <li target="_blank" class="nav-item">
+                    <a class="nav-link" href="https://github.com/hobsRKM/DiscordAPIWeb">PHPDiscordSDK Web</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">PHPDiscordSDK Web</a>
+                <li target="_blank" class="nav-item">
+                    <a class="nav-link" href="https://phpdiscordsdk.gitbook.io/">Docs</a>
                 </li>
             </ul>
         </div>

@@ -7,8 +7,17 @@ function api(type) {
     }
 
     switch (type) {
-        case 'getChannelDetails':
-            request('getChannelDetails');
+        case 'postChannelDetails':
+            request('postChannelDetails');
+            break;
+        case 'postChannelMessages':
+            request('postChannelMessages');
+            break;
+        case 'postUpdateChannelDetails':
+            request('postUpdateChannelDetails');
+            break;
+        case 'postUpdateChannelPermissions':
+            request('postUpdateChannelPermissions');
             break;
     }
 }
@@ -31,5 +40,9 @@ function request(url) {
             $(".loader").hide();
             $(".loader").parent().attr("disabled",false);
         }
-    );
+    ).fail(function(response) {
+        alert("Error occurred!! Check your paramters and API Docs for correct Usage");
+        $(".loader").hide();
+        $(".loader").parent().attr("disabled",false);
+    });;
 }

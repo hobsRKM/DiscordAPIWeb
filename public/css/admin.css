@@ -239,3 +239,10 @@ section {
     background-color: #274170 !important;
     color: white !important;
 }
+.bc {
+    font-size: 14px;
+}
+
+.demo_text {
+    color: #f29c93;
+}

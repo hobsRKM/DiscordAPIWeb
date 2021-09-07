@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use HobsRkm\SDK\PHPDiscordSDK\Config\Config;
 use Illuminate\Console\Command;
 use \HobsRkm\SDK\PHPDiscordSDK\PHPDiscordSDKFactory;
-use Illuminate\Http\Request;
 use React\Http\Browser;
 use App\Models\BotToken;
 
@@ -66,7 +65,7 @@ class StartBot extends Command
 
     public function console($message){
         (new Browser)->post(
-            "http://127.0.0.1:3026/",
+            SOCKET_URL,
             array(
                 'Content-Type' => 'application/json'
             ),

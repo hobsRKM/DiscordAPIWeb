@@ -35,8 +35,7 @@
                             </div>
                         </div>
                         <div class="align-self-center">
-                            <button type="button" class="btn btn-success">Demo</button>
-                        </div>
+                            <a href="channels/getChannelMessages"  class="btn btn-success">Demo</a>                        </div>
                     </div>
                 </div>
             </div>
@@ -55,7 +54,7 @@
                             </div>
                         </div>
                         <div class="align-self-center">
-                            <button type="button" class="btn btn-success">Demo</button>
+                            <a href="channels/getChannelPermissions"  class="btn btn-success">Demo</a>                        </div>
                         </div>
                     </div>
                 </div>
@@ -97,7 +96,7 @@
                             </div>
                         </div>
                         <div class="align-self-center">
-                            <button type="button" class="btn btn-success">Demo</button>
+                            <a href="channels/getUpdateChannelDetails"  class="btn btn-success">Demo</a>
                         </div>
                     </div>
                 </div>
