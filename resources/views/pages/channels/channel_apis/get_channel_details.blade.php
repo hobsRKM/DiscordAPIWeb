@@ -18,7 +18,7 @@
     </div>
     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
     <div style="text-align: center;">
-        <button   type="button" class="text-center btn btn-success "  onclick="api('getChannelDetails')"><span class="spinner-border spinner-border-sm loader"  role="status" aria-hidden="true"></span> Execute
+        <button   type="button" class="text-center btn btn-success "  onclick="api('postChannelDetails')"><span class="spinner-border spinner-border-sm loader"  role="status" aria-hidden="true"></span> Execute
         </button>
     </div>
 </form>
