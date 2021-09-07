@@ -65,7 +65,7 @@ class StartBot extends Command
 
     public function console($message){
         (new Browser)->post(
-            SOCKET_URL,
+            SOCKET_HTTP_URL,
             array(
                 'Content-Type' => 'application/json'
             ),

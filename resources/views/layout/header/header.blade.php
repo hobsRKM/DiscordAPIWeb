@@ -79,4 +79,4 @@
     <!-- Navbar -->
 </header>
 <!--Main Navigation-->
-<script type="text/javascript">const SOCKET_JS_URL = "{{SOCKET_JS_URL}}";</script>
+<script type="text/javascript">const SOCKET_CONNECTION_URL = "{{SOCKET_CONNECTION_URL}}";</script>

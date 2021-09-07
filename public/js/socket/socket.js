@@ -2,7 +2,7 @@ const botData = [];
 
 $( document ).ready(function() {
     hljs.highlightAll();
-    const socket = io(SOCKET_JS_URL);
+    const socket = io(SOCKET_CONNECTION_URL);
     socket.on("connect", () => {
         console.log("connected"); // x8WIv7-mJelg7on_ALbx
     });
