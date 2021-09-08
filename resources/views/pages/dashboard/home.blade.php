@@ -27,7 +27,7 @@
               <pre class="console-info">
                  <code class="">
                     1. Start the bot ````$ php bot.php```` in one terminal (screen if linux)
-                    2. Start the scoket server ````$ cd /projectroot/server/node app.js```` in another terminal (screen if linux)
+                    2. Start the socket server ````$ cd /projectroot/server/node app.js```` in another terminal (screen if linux)
                     3. Check the below console (Send a test message from discord server where bot is online)
                  </code>
             </pre>
