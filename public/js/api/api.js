@@ -46,3 +46,13 @@ function request(url) {
         $(".loader").parent().attr("disabled",false);
     });;
 }
+
+
+
+function pauseConsole() {
+    consoleAction = false;
+}
+
+function resumeConsole() {
+    consoleAction = true;
+}

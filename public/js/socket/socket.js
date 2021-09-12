@@ -1,5 +1,5 @@
 const botData = [];
-
+let consoleAction = true;
 $( document ).ready(function() {
     hljs.highlightAll();
     const socket = io(SOCKET_CONNECTION_URL);
@@ -16,15 +16,19 @@ $( document ).ready(function() {
     });
 
     socket.on("message", (data) => {
-        botData.push( new Date().toLocaleTimeString());
-        botData.push(data)
-        $("#Canvas").empty();
-        $("#RawJson").empty();
-        $("#RawJson").append(JSON.stringify(botData));
-        Process();
-        CollapseLevel(4);
+        if(consoleAction) {
+            botData.push(new Date().toLocaleTimeString());
+            botData.push(data)
+            $("#Canvas").empty();
+            $("#RawJson").empty();
+            $("#RawJson").append(JSON.stringify(botData));
+            Process();
+            CollapseLevel(4);
+            $('.CodeContainer').scrollTop($('.CodeContainer')[0].scrollHeight);
+        }
     });
 });
+
 
 
 

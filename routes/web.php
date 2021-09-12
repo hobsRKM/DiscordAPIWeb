@@ -23,7 +23,7 @@ Route::get('/channels', function () {
 });
 
 Route::get('/messages', function () {
-    return view(LAYOUT,["page"=>"pages/dashboard/home","data"=>array()]);
+    return view(LAYOUT,["page"=>"pages/messages/message","data"=>array()]);
 });
 
 Route::prefix('channels')->group(function () {

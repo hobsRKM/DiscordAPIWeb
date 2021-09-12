@@ -39,11 +39,19 @@ class StartBot extends Command
      *
      * @return int
      */
-    public function handle()
+    public function handle($token=null)
     {
-        PHPDiscordSDKFactory::getInstance()->botConnect($this->argument('token'))->then(
+        PHPDiscordSDKFactory::getInstance()->botConnect(!empty($token)?$token:$this->argument('token'))->then(
             function ($bot)  {
                 $this->saveToken();
+                PHPDiscordSDKFactory::getInstance('Presence')
+                    ->setActivity(
+                        array(
+                            "activity"=>"discordapidemo.com",
+                            "status"=>"online",
+                            "type"=>'WATCHING'
+                        )
+                    );
                 $bot->on('message', function ($event) {
                     PHPDiscordSDKFactory::getInstance()->formatEvent($event)->then(function($message){
                         //All events sent from client will be available here, including the server details the bot is listening on
@@ -53,6 +61,12 @@ class StartBot extends Command
                         print($reason->getMessage());
                         //echo $reason->getMessage();
                     });
+                });
+
+                $bot->on('close', function ($event) {
+                   // in case of unexpected close events, re-authenticate
+                    $token = BotToken::find(1);
+                    $this->handle($token->token);
                 });
             },
             function ($reason) {

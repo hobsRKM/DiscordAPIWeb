@@ -18,12 +18,13 @@
     </div>
 </section>
 <section class="mb-4">
-    <div class="card">
+    <div class="card custom-card">
+
         <div class="card-header py-3">
             <h5 class="mb-0 text-center"><strong>Console</strong></h5>
         </div>
 
-        <div class="card-body">
+        <div class="card-body ">
               <pre class="console-info">
                  <code class="">
                     1. Start the bot ````$ php bot.php```` in one terminal (screen if linux)
@@ -41,4 +42,4 @@
 
 </section>
 </div>
-
+<script src="{{URL::to('/')}}/js/socket/socket.js"></script>

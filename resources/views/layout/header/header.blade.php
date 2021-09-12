@@ -32,7 +32,7 @@
                 <a href="/" class="list-group-item list-group-item-action py-2 ripple {{ request()->is('/') ? 'active' : '' }}"  >
                     <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Dashboard Console</span>
                 </a>
-                <a href="{{URL::to('/')}}/channels" class="list-group-item list-group-item-action py-2 ripple {{ request()->is('channels/*') ? 'active' : '' }}">
+                <a href="{{URL::to('/')}}/channels" class="list-group-item list-group-item-action py-2 ripple {{ request()->is('channels') || request()->is('channels/*') ? 'active' : '' }}">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Channels </span>
                 </a>
                 <a href="{{URL::to('/')}}/messages" class="list-group-item list-group-item-action py-2 ripple"><i
@@ -62,7 +62,7 @@
             <a class="navbar-brand" href="#">
                 <h3>PHPDiscordSDK</h3>
             </a>
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-none d-sm-flex">
                 <li class="nav-item">
                     <a target="_blank" class="nav-link" href="https://github.com/hobsRKM/phpdiscordsdk">PHPDiscordSDK Library</a>
                 </li>

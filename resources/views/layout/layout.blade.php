@@ -12,7 +12,6 @@
 <!-- MDB -->
 <script type="text/javascript" src="{{URL::to('/')}}/js/mdb.min.js"></script>
 <!-- Custom scripts -->
-<script src="{{URL::to('/')}}/js/socket/socket.js"></script>
 <script src="{{URL::to('/')}}/js/api/api.js"></script>
 </body>
 @include('layout.footer.footer')
